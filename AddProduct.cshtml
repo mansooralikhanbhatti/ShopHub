@@ -1,0 +1,31 @@
+﻿@model ShopHub.Models.AddProductModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "_LoginLayout";
+}
+
+<form method="post" action="/Product/SaveProduct">
+    <div class="form-group">
+        <label for="ProductName">Product Name</label>
+        <input type="text" class="form-control"
+               id="ProductName" name="ProductName" placeholder="Enter Product Name">
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" class="form-control"
+               id="Description" name="Description" placeholder="Enter Description">
+    </div>
+
+    <div class="form-group">
+        <label for="Price">Price</label>
+        <input type="number" class="form-control"
+               id="Price" name="Price" placeholder="Enter Price">
+    </div>
+    <div class="form-group">
+        <label for="Stock">Stock</label>
+        <input type="number" class="form-control"
+               id="Stock" name="Stock" placeholder="Enter Stock">
+    </div>
+    <button type="submit" class="btn btn-primary">Save Product</button>
+</form>
